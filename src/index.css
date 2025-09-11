@@ -114,7 +114,41 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-transparent! border border-amber-500 text-primary font-medium px-8 py-4 rounded-xl;
+    @apply hover:bg-amber-600! transform hover:scale-105 transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl;
+  }
+
+  .btn-elegant {
+    @apply bg-primary text-primary-foreground font-medium px-8 py-4 rounded-xl;
+    @apply hover:bg-primary/90 transform hover:scale-105 transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl;
+  }
+
+  .section-padding {
+    @apply px-6 py-16 md:px-12 lg:px-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
   }
 }
