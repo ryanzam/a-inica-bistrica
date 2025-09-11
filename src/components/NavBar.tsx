@@ -30,7 +30,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
       <div className="container-max px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -77,7 +77,7 @@ const NavBar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t shadow-lg">
+          <div className="md:hidden bg-white/50 border-t shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <button
@@ -90,7 +90,7 @@ const NavBar = () => {
               ))}
               <Button
                 onClick={() => scrollToSection('#reservations')}
-                className="w-full mt-4 btn-gold"
+                className="w-full bg-amber-500 text-white mt-4"
               >
                 Book Now
               </Button>
