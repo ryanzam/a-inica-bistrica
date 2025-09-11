@@ -44,7 +44,7 @@ const Contacts = () => {
                     </p>
                 </div>
 
-                <div data-aos="fade-up" className="grid lg:grid-cols-2 gap-12 items-start" >
+                <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start" >
                     {/* Contact Information */}
                     <div className="space-y-6">
                         {contactInfo.map((item, index) => (
