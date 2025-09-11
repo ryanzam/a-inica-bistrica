@@ -74,15 +74,15 @@ const Reservations = () => {
 
       <div className="relative z-10 container-max">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 data-aos="fade-left" className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
             Reserve Your Table
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p data-aos="fade-right" className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Book your unforgettable dining experience at Bella Vista. We look forward to welcoming you.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div data-aos="fade-up" className="max-w-4xl mx-auto">
           <Card className="shadow-elegant border-0 bg-white/20">
             <CardHeader className="text-center pb-8">
               <CardTitle className="font-display text-2xl text-primary">

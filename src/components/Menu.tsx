@@ -91,7 +91,7 @@ const MenuSection = ({ title, items }: { title: string; items: any[] }) => (
         <h3 className="font-display text-3xl font-semibold text-white mb-8 text-center uppercase">
             {title}
         </h3>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2"  data-aos="fade-right">
             {items.map((item, index) => (
                 <Card key={index} className="shadow-elegant hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
                     <CardContent className="p-6">
@@ -137,7 +137,7 @@ const Menu = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90" />
 
             <div className="relative z-10 container-max">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16" data-aos="fade-up">
                     <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
                         Our Menu
                     </h2>

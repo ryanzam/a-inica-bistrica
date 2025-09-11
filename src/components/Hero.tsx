@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero.jpg";
+import heroVideo from "@/assets/coffee.mp4";
 
 const Hero = () => {
     const scrollToReservations = () => {
@@ -12,8 +12,12 @@ const Hero = () => {
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${heroImage})` }}
-            />
+            >
+                <video className="object-cover w-[100vw] h-[100vh]" loop autoPlay muted>
+                    <source src={heroVideo} type="video/mp4" />
+                </video>
+            </div>
+
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/70" />
