@@ -232,13 +232,6 @@ const Reservations = () => {
                   {isSubmitting ? "Confirming Reservation..." : "Confirm Reservation"}
                 </Button>
               </div>
-
-              <div className="text-center text-sm text-muted-foreground pt-4 ">
-                <p>* Required fields</p>
-                <p className="mt-2">
-                  For parties of 9 or more, please call us directly at (555) 123-4567
-                </p>
-              </div>
             </CardContent>
           </Card>
         </div>

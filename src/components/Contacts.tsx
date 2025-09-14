@@ -106,11 +106,10 @@ const Contacts = () => {
                     <Card className="shadow-elegant border-0 bg-primary text-primary-foreground">
                         <CardContent className="p-8">
                             <h3 className="font-display text-2xl font-semibold mb-4">
-                                Private Events & Catering
+                                Get in Touch
                             </h3>
                             <p className="text-lg mb-6 opacity-90">
-                                Host your special occasion at Bella Vista. Our private dining rooms and catering services
-                                are perfect for corporate events, celebrations, and intimate gatherings.
+                                Contact us for more information
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
