@@ -1,24 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
-import contactImage from "@/assets/cappacino.jpg"
+import contactImage from "@/assets/bistinica.jpg"
 
 const Contacts = () => {
     const contactInfo = [
         {
             icon: MapPin,
             title: "Address",
-            details: ["Zagrebačka, Sarajevo 71000, Bosnia ja Hertsegovina"]
+            details: ["Bravadžiluk 24, Sarajevo 71000, Bosnia ja Hertsegovina"]
         },
         {
             icon: Phone,
             title: "Phone",
-            details: ["Reservations: +38761603960", "General Inquiries: +38761603960"]
+            details: ["Reservations: +38761224016", "General Inquiries: +38761224016"]
         },
         {
             icon: Clock,
             title: "Hours",
             details: [
-                "Monday - Sunday: 7:00 AM - 23:00 PM",
+                "Monday - Friday: 6:30 AM - 3:00 PM",
+                "Saturday : 6:30 AM - 1:30 PM",
+                "Sunday - Closed"
             ]
         }
     ];
@@ -78,8 +80,7 @@ const Contacts = () => {
                             <CardContent className="p-0">
                                 <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/60 flex items-center justify-center relative">
                                     <div className="text-center">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.2955646927597!2d18.40198616963167!3d43.85205089819333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8e006ec413d%3A0x31e11471107399c!2sCaffe%20%22CHE2%22!5e0!3m2!1sfi!2sfi!4v1757592588476!5m2!1sfi!2sfi" width="600" height="450" loading="lazy"></iframe>
-                                    </div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.8485722268756!2d18.4314891!3d43.858967199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8c84b96832f%3A0xf59ffa68e6beedac!2zQcWhxI1pbmljYSBCSVNUUklDQQ!5e0!3m2!1sen!2sfi!4v1757839803096!5m2!1sen!2sfi" width="600" height="450" loading="lazy"></iframe>                                    </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </div>
                             </CardContent>
@@ -88,7 +89,7 @@ const Contacts = () => {
                         {/* Direction Button */}
                         <div className="mt-6 text-center">
                             <a
-                                href="https://www.google.com/maps/place/Caffe+%22CHE2%22/@43.8517724,18.3938419,15z/data=!4m17!1m10!3m9!1s0x4758c8e006ec413d:0x31e11471107399c!2sCaffe+%22CHE2%22!8m2!3d43.8520509!4d18.4026299!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11c1tjjhty!3m5!1s0x4758c8e006ec413d:0x31e11471107399c!8m2!3d43.8520509!4d18.4026299!16s%2Fg%2F11c1tjjhty?entry=ttu&g_ep=EgoyMDI1MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+                                href="https://maps.app.goo.gl/LSmmB8CkSaQoVWTq8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 btn-elegant"
@@ -117,14 +118,14 @@ const Contacts = () => {
                                     className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition-colors"
                                 >
                                     <Mail className="w-4 h-4" />
-                                    events@cafeche.com
+                                    events@ascinica-bistrica.com
                                 </a>
                                 <a
                                     href="tel:+15551234568"
                                     className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition-colors"
                                 >
                                     <Phone className="w-4 h-4" />
-                                    +387 61603 960
+                                    +38761224016
                                 </a>
                             </div>
                         </CardContent>

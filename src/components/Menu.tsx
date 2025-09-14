@@ -1,6 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import menuImage from "@/assets/cafe.jpg";
+import menuImage from "@/assets/food.jpg";
+
+import menuImage1 from "@/assets/food.jpg";
+import menuImage3 from "@/assets/food3.jpg";
+import menuImage2 from "@/assets/food1.jpg";
+import menuImage5 from "@/assets/food5.jpg";
+import menuImage4 from "@/assets/food4.jpg"
+
 
 const menuData = {
     appetizers: [
@@ -91,9 +98,9 @@ const MenuSection = ({ title, items }: { title: string; items: any[] }) => (
         <h3 className="font-display text-3xl font-semibold text-white mb-8 text-center uppercase">
             {title}
         </h3>
-        <div className="grid gap-6 md:grid-cols-2"  data-aos="fade-right">
+        <div className="grid gap-6 md:grid-cols-2" data-aos="fade-right">
             {items.map((item, index) => (
-                <Card key={index} className="shadow-elegant hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <Card key={index} className="rounded overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
                     <CardContent className="p-6">
                         <div className="flex justify-between items-start mb-3">
                             <h4 className="font-display text-xl font-semibold text-primary">
@@ -146,9 +153,33 @@ const Menu = () => {
                     </p>
                 </div>
 
-                <MenuSection title="Topli Napici" items={menuData.appetizers} />
+                {/* <MenuSection title="Topli Napici" items={menuData.appetizers} />
                 <MenuSection title="Hladni Napici" items={menuData.mains} />
-                <MenuSection title="Desserts" items={menuData.desserts} />
+                <MenuSection title="Desserts" items={menuData.desserts} /> */}
+
+                <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <Card key={1} className="p-0 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                        <CardContent className="p-0">
+                            <img className="rounded-xl transition delay-150 duration-300 ease-in-out hover:scale-120" src={menuImage1} alt="" />
+                        </CardContent>
+                    </Card>
+                    <Card key={2} className="p-0 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                        <CardContent className="p-0">
+                            <img className="rounded-xl transition delay-150 duration-300 ease-in-out hover:scale-120" src={menuImage2} alt="" />
+                        </CardContent>
+                    </Card>
+                    <Card key={3} className="p-0 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                        <CardContent className="p-0">
+                            <img className="rounded-xl transition delay-150 duration-300 ease-in-out hover:scale-120" src={menuImage3} alt="" />
+                        </CardContent>
+                    </Card>
+                    <Card key={4} className="p-0 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                        <CardContent className="p-0">
+                            <img className="rounded-xl transition delay-150 duration-300 ease-in-out hover:scale-120" src={menuImage4} alt="" />
+                        </CardContent>
+                    </Card>
+                </div>
+
             </div>
         </section>
     );

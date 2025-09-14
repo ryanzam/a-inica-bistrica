@@ -15,7 +15,6 @@ const NavBar = () => {
   }, []);
 
   const navigationItems = [
-    { name: "Home", href: "#hero" },
     { name: "Menu", href: "#menu" },
     { name: "Reservations", href: "#reservations" },
     { name: "Contact", href: "#contact" }
@@ -33,13 +32,24 @@ const NavBar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
       <div className="container-max px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className={`font-display text-2xl md:text-3xl font-bold transition-colors ${isScrolled ? 'text-primary' : 'text-white'
+        <div className="grid place-items-center grid-cols-3 h-16 md:h-20">
+
+          <div className="flex flex-col">
+            <span className={`font-display font-bold transition-colors ${isScrolled ? 'text-primary' : 'text-orange-300'
               }`}>
-              Cafe Che
+              +38761224016
+            </span>
+          </div>
+
+          {/* Logo */}
+          <div className="flex justify-center flex-col items-center">
+            <h1 className={`cursor-pointer font-display text-xl md:text-2xl font-bold transition-colors ${isScrolled ? 'text-primary' : 'text-white'
+              }`}>
+              Aščinica
             </h1>
+            <span className="block text-xl text-orange-300">
+              BISTRICA
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -48,18 +58,12 @@ const NavBar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-colors hover:text-accent-gold ${isScrolled ? 'text-primary' : 'text-white'
+                className={`cursor-pointer font-medium transition-colors hover:text-accent-gold ${isScrolled ? 'text-primary' : 'text-orange-300'
                   }`}
               >
                 {item.name}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection('#reservations')}
-              className="btn-gold ml-4"
-            >
-              Book Now
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -90,7 +94,7 @@ const NavBar = () => {
               ))}
               <Button
                 onClick={() => scrollToSection('#reservations')}
-                className="w-full bg-amber-500 text-white mt-4"
+                className="w-full bg-amber-600 text-white mt-4"
               >
                 Book Now
               </Button>

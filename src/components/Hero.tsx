@@ -1,11 +1,27 @@
 import { Button } from "@/components/ui/button";
-import heroVideo from "@/assets/coffee.mp4";
+import heroImage from "@/assets/ascinica bistrica.jpg";
+import heroImage1 from "@/assets/bistinica.jpg";
+import heroImage2 from "@/assets/ascinica bis.jpg";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import React from "react";
 
 const Hero = () => {
+
     const scrollToReservations = () => {
         const reservationsSection = document.getElementById('reservations');
         reservationsSection?.scrollIntoView({ behavior: 'smooth' });
     };
+
+    const plugin = React.useRef(
+        Autoplay({ delay: 5000, stopOnInteraction: true })
+    )
 
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -13,22 +29,36 @@ const Hero = () => {
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             >
-                <video className="object-cover w-[100vw] h-[100vh]" loop autoPlay muted>
-                    <source src={heroVideo} type="video/mp4" />
-                </video>
+                <Carousel
+                    plugins={[plugin.current]}
+                >
+                    <CarouselContent>
+                        <CarouselItem>
+                            <img src={heroImage} alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src={heroImage1} alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src={heroImage2} alt="" />
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
 
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black/90" />
 
             {/* Content */}
             <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
                 <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-                    Cafe Che
+                    Aščinica BISTRICA
                 </h1>
                 <p className="text-xl md:text-2xl font-light mb-8 text-white/90 max-w-2xl mx-auto">
-                    Right after visiting National Museum of Bosnia and Herzegovina, come here for a meal. Great coffee is among the best drinks to order
+                    A charming restaurant that offers a delightful dining experience reflecting the rich culinary traditions of the region.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button
