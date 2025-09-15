@@ -12,6 +12,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner"
 import reservationImage from "@/assets/food.jpg"
+import { useTranslation } from "react-i18next";
 
 const timeSlots = [
   "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
@@ -29,6 +30,8 @@ const Reservations = () => {
     specialRequests: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const { t } = useTranslation()
 
   const handleSubmit = async () => {
     if (!date || !formData.name || !formData.email || !formData.phone || !formData.time || !formData.guests) {
@@ -74,10 +77,10 @@ const Reservations = () => {
       <div className="relative z-10 container-max">
         <div className="text-center mb-16">
           <h2 data-aos="fade-left" className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-            Reserve Your Table
+            {t("reservation.title")}
           </h2>
           <p data-aos="fade-right" className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Book your unforgettable dining experience at Bella Vista. We look forward to welcoming you.
+            {t("reservation.description")}
           </p>
         </div>
 
@@ -85,7 +88,7 @@ const Reservations = () => {
           <Card className="shadow-elegant border-0 bg-white/20">
             <CardHeader className="text-center pb-8">
               <CardTitle className="font-display text-2xl text-primary">
-                Make a Reservation
+                {t("reservation.makeReservation")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -95,7 +98,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label htmlFor="name" className="flex items-center gap-2 text-white">
                       <User className="w-4 h-4" />
-                      Full Name *
+                      {t("reservation.fullName")} *
                     </Label>
                     <Input
                       id="name"
@@ -109,7 +112,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label htmlFor="email" className="flex items-center gap-2  text-white">
                       <Mail className="w-4 h-4" />
-                      Email Address *
+                      {t("reservation.email")} *
                     </Label>
                     <Input
                       id="email"
@@ -124,7 +127,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="flex items-center gap-2  text-white">
                       <Phone className="w-4 h-4" />
-                      Phone Number *
+                      {t("reservation.phone")} *
                     </Label>
                     <Input
                       id="phone"
@@ -142,7 +145,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label className="flex items-center gap-2  text-white">
                       <CalendarIcon className="w-4 h-4" />
-                      Date *
+                      {t("reservation.date")} *
                     </Label>
                     <Popover>
                       <PopoverTrigger asChild>
@@ -173,7 +176,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label className="flex items-center gap-2  text-white">
                       <Clock className="w-4 h-4" />
-                      Time *
+                      {t("reservation.time")} *
                     </Label>
                     <Select value={formData.time} onValueChange={(value) => updateFormData("time", value)}>
                       <SelectTrigger className="bg-secondary/50">
@@ -192,7 +195,7 @@ const Reservations = () => {
                   <div className="space-y-2">
                     <Label className="flex items-center gap-2  text-white">
                       <Users className="w-4 h-4" />
-                      Number of Guests *
+                      {t("reservation.guest")} *
                     </Label>
                     <Select value={formData.guests} onValueChange={(value) => updateFormData("guests", value)}>
                       <SelectTrigger className="bg-secondary/50">
@@ -212,7 +215,7 @@ const Reservations = () => {
 
               {/* Special Requests */}
               <div className="space-y-2">
-                <Label htmlFor="requests" className=" text-white">Special Requests</Label>
+                <Label htmlFor="requests" className=" text-white">{t("reservation.specialRequests")}</Label>
                 <Textarea
                   id="requests"
                   value={formData.specialRequests}
@@ -229,7 +232,7 @@ const Reservations = () => {
                   disabled={isSubmitting}
                   className="w-full btn-gold text-lg py-6"
                 >
-                  {isSubmitting ? "Confirming Reservation..." : "Confirm Reservation"}
+                  {isSubmitting ? "Confirming Reservation..." : t("reservation.confirmReservation")}
                 </Button>
               </div>
             </CardContent>

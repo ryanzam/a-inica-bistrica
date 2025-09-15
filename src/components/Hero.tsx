@@ -11,8 +11,11 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+
+    const { t } = useTranslation();
 
     const scrollToReservations = () => {
         const reservationsSection = document.getElementById('reservations');
@@ -58,21 +61,21 @@ const Hero = () => {
                     Aščinica BISTRICA
                 </h1>
                 <p className="text-xl md:text-2xl font-light mb-8 text-white/90 max-w-2xl mx-auto">
-                    A charming restaurant that offers a delightful dining experience reflecting the rich culinary traditions of the region.
+                    {t('hero.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button
                         onClick={scrollToReservations}
                         className="btn-gold text-lg px-8 py-4 min-w-[200px]"
                     >
-                        Reserve a Table
+                        {t('hero.reserveTable')}
                     </Button>
                     <Button
                         variant="outline"
                         className="text-lg px-8 py-4 min-w-[200px] border-white/30 bg-transparent hover:bg-white/10 hover:border-white/50 hover:text-white/40"
                         onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
                     >
-                        View Menu
+                        {t('hero.viewMenu')}
                     </Button>
                 </div>
             </div>

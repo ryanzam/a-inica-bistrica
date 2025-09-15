@@ -1,17 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import contactImage from "@/assets/bistinica.jpg"
+import { useTranslation } from "react-i18next";
 
 const Contacts = () => {
+
+    const { t } = useTranslation();
+
     const contactInfo = [
         {
             icon: MapPin,
-            title: "Address",
+            title: t("contact.title"),
             details: ["Bravadžiluk 24, Sarajevo 71000, Bosnia ja Hertsegovina"]
         },
         {
             icon: Phone,
-            title: "Phone",
+            title: t("contact.phone"),
             details: ["Reservations: +38761224016", "General Inquiries: +38761224016"]
         },
         {
@@ -39,10 +43,10 @@ const Contacts = () => {
             <div className="relative container-max z-10">
                 <div className="text-center mb-16">
                     <h2 data-aos="fade-left" className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-                        Visit Us
+                        {t("contact.title")}
                     </h2>
                     <p data-aos="fade-right" className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Right after visiting National Museum of Bosnia and Herzegovina, come here for to enjoy meal.
+                        {t("contact.description")}
                     </p>
                 </div>
 
@@ -95,7 +99,7 @@ const Contacts = () => {
                                 className="inline-flex items-center gap-2 btn-elegant"
                             >
                                 <MapPin className="w-4 h-4" />
-                                Get Directions
+                                {t("contact.getDirection")}
                             </a>
                         </div>
                     </div>
@@ -106,10 +110,10 @@ const Contacts = () => {
                     <Card className="shadow-elegant border-0 bg-primary text-primary-foreground">
                         <CardContent className="p-8">
                             <h3 className="font-display text-2xl font-semibold mb-4">
-                                Get in Touch
+                                {t("contact.getinTouch")}
                             </h3>
                             <p className="text-lg mb-6 opacity-90">
-                                Contact us for more information
+                                {t("contact.contactUs")}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a

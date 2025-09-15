@@ -2,22 +2,33 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+import { useTranslation } from 'react-i18next';
+import ReactFlagsSelect from "react-flags-select";
+
 const NavBar = () => {
+  const locale = navigator.language.split("-")[0];
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [selected, setSelected] = useState(locale === "en" ? "US" : "BA");
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
+
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navigationItems = [
-    { name: "Menu", href: "#menu" },
-    { name: "Reservations", href: "#reservations" },
-    { name: "Contact", href: "#contact" }
+    { name: t("nav.menu"), href: "#menu" },
+    { name: t("nav.reservation"), href: "#reservations" },
+    { name: t("nav.contact"), href: "#contact" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -28,17 +39,29 @@ const NavBar = () => {
     setIsOpen(false);
   };
 
+  const onSelectedChange = (flag: string) => {
+    setSelected(flag);
+    i18n.changeLanguage(flag === "US" ? "en" : "ba");
+  }
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
       <div className="container-max px-6">
         <div className="grid place-items-center grid-cols-3 h-16 md:h-20">
 
-          <div className="flex flex-col">
+          <div className="flex items-center space-x-4">
             <span className={`font-display font-bold transition-colors ${isScrolled ? 'text-primary' : 'text-orange-300'
               }`}>
               +38761224016
             </span>
+            <ReactFlagsSelect
+              className=""
+              selected={selected}
+              onSelect={(flag) => onSelectedChange(flag)}
+              countries={["US", "BA"]}
+              customLabels={{ US: " ", BA: " ", }}
+            />
           </div>
 
           {/* Logo */}
@@ -92,12 +115,6 @@ const NavBar = () => {
                   {item.name}
                 </button>
               ))}
-              <Button
-                onClick={() => scrollToSection('#reservations')}
-                className="w-full bg-amber-600 text-white mt-4"
-              >
-                Book Now
-              </Button>
             </div>
           </div>
         )}

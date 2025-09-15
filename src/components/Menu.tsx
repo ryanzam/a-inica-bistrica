@@ -1,15 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+//import { Badge } from "@/components/ui/badge";
 import menuImage from "@/assets/food.jpg";
 
 import menuImage1 from "@/assets/food.jpg";
 import menuImage3 from "@/assets/food3.jpg";
 import menuImage2 from "@/assets/food1.jpg";
-import menuImage5 from "@/assets/food5.jpg";
 import menuImage4 from "@/assets/food4.jpg"
+import { useTranslation } from "react-i18next";
 
-
-const menuData = {
+/* const menuData = {
     appetizers: [
         {
             name: "Kafa",
@@ -82,9 +81,9 @@ const menuData = {
             dietary: ["v"]
         }
     ]
-};
+}; */
 
-const getDietaryBadge = (dietary: string) => {
+/* const getDietaryBadge = (dietary: string) => {
     const badges = {
         v: { label: "Vegetarian", className: "bg-green-100 text-green-800" },
         gf: { label: "Gluten Free", className: "bg-blue-100 text-blue-800" }
@@ -131,8 +130,11 @@ const MenuSection = ({ title, items }: { title: string; items: any[] }) => (
         </div>
     </div>
 );
-
+ */
 const Menu = () => {
+
+    const { t } = useTranslation();
+
     return (
         <section id="menu" className="relative section-padding bg-secondary/40">
 
@@ -146,10 +148,10 @@ const Menu = () => {
             <div className="relative z-10 container-max">
                 <div className="text-center mb-16" data-aos="fade-up">
                     <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-                        Our Menu
+                        {t("menu.title")}
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Crafted with the finest ingredients and inspired by both traditional and contemporary culinary techniques
+                        {t("menu.description")}
                     </p>
                 </div>
 

@@ -1,0 +1,43 @@
+{
+    "nav": {
+        "menu": "Meni",
+        "reservation": "Rezervacija",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "description": "Šarmantan restoran koji nudi ugodno iskustvo objedovanja koje odražava bogate kulinarske tradicije regije.",
+        "reserveTable": "Rezervišite sto",
+        "viewMenu": "Vidi meni"
+    },
+    "menu": {
+        "title": "Naš Poseban",
+        "description": "Napravljeno od najfinijih sastojaka i inspirisano tradicionalnim i savremenim kulinarskim tehnikama"
+    },
+    "reservation": {
+        "title": "Rezervišite svoj sto",
+        "description": "Rezervišite svoje nezaboravno kulinarsko iskustvo u Bella Visti. Radujemo se Vašem dolasku.",
+        "makeReservation": "Napravite rezervaciju",
+        "fullName": "Puno ime",
+        "date": "Datum",
+        "email": "Email adresa",
+        "time": "Vrijeme",
+        "phone": "Broj telefona",
+        "guest": "Broj gostiju",
+        "specialRequests": "Posebni zahtjevi",
+        "confirmReservation": "Potvrdite rezervaciju"
+    },
+    "contact": {
+        "title": "Posjetite nas",
+        "description": "Odmah nakon posjete Zemaljskom muzeju Bosne i Hercegovine, dođite ovdje da uživate u obroku.",
+        "address": "Adresa",
+        "phone": "Telefon",
+        "hours": {
+            "monFri": "Ponedjeljak - Petak : 6:30 AM - 3:00 PM",
+            "sat": "Subota : 6:30 AM - 1:30 PM",
+            "sun": "Nedjelja - Zatvoreno"
+        },
+        "getDirection": "Dobiti Upute",
+        "getinTouch": "Javite se",
+        "contactUs": "Kontaktirajte nas za više informacija"
+    }
+}

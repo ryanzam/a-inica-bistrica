@@ -1,0 +1,44 @@
+{
+    "nav": {
+        "menu": "Menu",
+        "reservation": "Reservation",
+        "contact": "Contact"
+    },
+    "hero": {
+        "description": "A charming restaurant that offers a delightful dining experience reflecting the rich culinary traditions of the region.",
+        "reserveTable": "Reserve a Table",
+        "viewMenu": "View Menu"
+    },
+    "menu": {
+        "title": "Our Sepcials",
+        "description": "Crafted with the finest ingredients and inspired by both traditional and contemporary culinary techniques"
+    },
+    "reservation": {
+        "title": "Reserve Your Table",
+        "description": "Book your unforgettable dining experience at Bella Vista. We look forward to welcoming you.",
+        "makeReservation": "Make a Reservation",
+        "fullName": "Full Name",
+        "date": "Date",
+        "email": "Email Address",
+        "time": "Time",
+        "phone": "Phone Number",
+        "guest": "Number of Guests",
+        "specialRequests": "Special Requests",
+        "confirmReservation": "Confirm Reservation"
+    },
+    "contact": {
+        "title": "Visit Us",
+        "description": "Right after visiting National Museum of Bosnia and Herzegovina, come here for to enjoy meal.",
+        "address": "Address",
+        "phone": "Phone",
+        "hours": {
+            "title": "Hours",
+            "monFri": "Monday - Friday: 6:30 AM - 3:00 PM",
+            "sat": "Saturday : 6:30 AM - 1:30 PM",
+            "sun": "Sunday - Closed"
+        },
+        "getDirection": "Get Direction",
+        "getinTouch": "Get in Touch",
+        "contactUs": "Contact us for more information"
+    }
+}
